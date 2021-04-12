@@ -15,7 +15,7 @@
   tasks:
     - name: "Remove Existing Working Directory"
       file:
-        path: roles/ansible_temp_dir
+        path: roles/ansible_json_payload
         state: absent
       tags: always
 
