@@ -1,0 +1,6 @@
+---
+- name: Loading Fabric Hardware and Health Queries
+  include: '{{ item }}'
+  with_fileglob:
+    - roles/grabber/tasks/querydata/HwHealth/*.yml
+  tags: always

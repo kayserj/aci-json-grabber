@@ -1,0 +1,6 @@
+---
+- name: Loading Fabric Access Policy Queries
+  include: '{{ item }}'
+  with_fileglob:
+    - roles/grabber/tasks/querydata/FabAccPol/*.yml
+  tags: always

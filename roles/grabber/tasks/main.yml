@@ -1,0 +1,55 @@
+---
+# Pre Processing/Play setup tasks
+- name: Pre-processing
+  include_tasks: pre-processing.yml
+  tags: always
+
+# Fabric Pod Policy
+- name: Fabric Pod Policy
+  include_tasks: FabPodPol_grp.yml
+  tags: always
+
+# Fabric Access Policies
+- name: Fabric Access Policies
+  include_tasks: FabAccPol_grp.yml
+  tags: always
+
+# Fabric Tenant Policy
+- name: Fabric Tenant Policy
+  include_tasks: FabTnPol_grp.yml
+  tags: always
+
+# Fabric L3 Policy
+- name: Fabric L3 Policy
+  include_tasks: FabL3Pol_grp.yml
+  tags: always
+
+# Fabric VMM Policy
+- name: Fabric VMM
+  include_tasks: FabVMM_grp.yml
+  tags: always
+  
+# Fabric Admin Management
+- name: Fabric Admin Managements
+  include_tasks: FabAdmin_grp.yml
+  tags: always
+
+# Fabric Mpod
+- name: Fabric Multipod Policy
+  include_tasks: FabMpod_grp.yml
+  tags: always
+
+# Hardware and Health
+- name: Hardware and Health
+  include_tasks: HwHealth_grp.yml
+  tags: always
+
+# Post Processing
+- name: Post-processing
+  include_tasks: post-processing.yml
+  tags: always
+
+# Garbage Collection
+- name: Garbage Collection
+  include_tasks: trash.yml
+  tags: always

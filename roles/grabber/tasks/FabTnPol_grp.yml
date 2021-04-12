@@ -1,0 +1,6 @@
+---
+- name: Loading Fabric Tenant Policy Queries
+  include: '{{ item }}'
+  with_fileglob:
+    - roles/grabber/tasks/querydata/FabTnPol/*.yml
+  tags: always

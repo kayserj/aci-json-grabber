@@ -1,0 +1,6 @@
+---
+- name: "Removing Working Directory"
+  file:
+    path: '{{ temp_dir.path }}'
+    state: absent
+  tags: always

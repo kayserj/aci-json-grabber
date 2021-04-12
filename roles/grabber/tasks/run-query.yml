@@ -1,0 +1,12 @@
+---
+- name: Query {{ aci_query_title }}
+  aci_rest:
+    host: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: yes
+    validate_certs: false
+    path: "{{ api_query_filter }}"
+    method: get
+  register: aci_response
+  tags: always

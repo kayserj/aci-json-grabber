@@ -1,0 +1,6 @@
+---
+- name: Loading Fabric Pod Policy Queries
+  include: '{{ item }}'
+  with_fileglob:
+    - roles/grabber/tasks/querydata/FabPodPol/*.yml
+  tags: always
