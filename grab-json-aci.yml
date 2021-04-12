@@ -47,6 +47,6 @@
     unsafe: yes
 
   - name: "run_routetable"
-    prompt: "Do you want to add fabric routing inforation? y|n  Default"
+    prompt: "Do you want to add fabric routing information? y|n  Default"
     private: no
     default: 'y'
