@@ -8,29 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+Must have a working version of Ansible 2.9 or similar.  
+Has not yet been tested on version 3.0 or above.  
 
-Works with Ansible version 2.9, and has not yet been tested on version 3.0 or above.
-
-
-How to install
-
-Ubuntu
-
-```
-sudo apt install python3
-sudo apt install python3-pip
-sudo apt install software-properties-common
-sudo -H pip3 install setuptools
-sudo -H pip3 install ansible==2.9.6
-```
-
-Mac
-
-```
-sudo easy_install pip
-sudo -H pip3 install setuptools
-sudo -H pip3 install ansible==2.9.6
-```
 
 ### Installation of Playbook
 
