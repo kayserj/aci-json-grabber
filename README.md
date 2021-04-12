@@ -25,7 +25,7 @@ From within the aci-json-grabber folder, issue the following command.
 
 For Password Based Authentication
 ```
-ansible-playbook -i aci_hosts grab-json-aci.yml --tags pass
+ansible-playbook -i aci_hosts grab-json-aci.yml
 ```
 
 Upon execution, the playbook will ask for user input.
