@@ -1,0 +1,20 @@
+---
+- name: Setting Output File Name
+  set_fact:
+    aci_query_title: 'bgp_peers'
+  tags: always
+
+- name: Applying API Path JSON Query Filter
+  set_fact:
+    api_query_filter: '/api/node/class/bgpPeer.json?query-target=subtree&target-subtree-class=bgpPeer&rsp-subtree=full'
+  tags: always
+
+- name: Run Query
+  include_tasks: tasks/run-query.yml
+  tags: always
+
+- name: Copy Response to Disk
+  copy: 
+    content: '{{ aci_response }}' 
+    dest: '{{ temp_dir.path }}/{{ aci_query_title }}.json'
+  tags: always

@@ -1,0 +1,14 @@
+---
+- name: "Remove Existing Working Directory"
+  file:
+    path: ~/ansible_json_payload
+    state: absent
+  tags: always
+
+- name: "Make Working Directory"
+  file:
+    path: ~/ansible_json_payload
+    state: directory
+    mode: '0755'
+  register: temp_dir
+  tags: always
