@@ -1,6 +1,0 @@
----
-- name: Loading Fabric L3 Policy Queries
-  include: '{{ item }}'
-  with_fileglob:
-    - roles/grabber/tasks/querydata/FabL3Pol/*.yml
-  tags: always

@@ -1,4 +1,0 @@
----
-- name: Move JSON directory to ~/
-  command: "mv {{ temp_dir.path }} ~/"
-  tags: always

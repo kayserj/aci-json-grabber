@@ -1,6 +1,0 @@
----
-- name: Loading Fabric VMM Policy Queries
-  include: '{{ item }}'
-  with_fileglob:
-    - roles/grabber/tasks/querydata/FabVMMPol/*.yml
-  tags: always

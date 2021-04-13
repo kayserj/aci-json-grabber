@@ -1,6 +1,0 @@
----
-- name: Loading Multipod Policy Queries
-  include: '{{ item }}'
-  with_fileglob:
-    - roles/grabber/tasks/querydata/Mpod/*.yml
-  tags: always
