@@ -44,7 +44,7 @@ Upon execution, the playbook will ask for the user input.
 
 ### Details
 
-Running the playbook will create a folder called ansible_json_payload that contains .json files, in your user’s home directory.  After the play completes, check your home directory for the folder with the files. The users home directory is referenced with `~/`
+Running the playbook will create a folder called `ansible_json_payload` that contains .json files, in your user’s home directory.  After the play completes, check your home directory for the folder with the files. The users home directory is referenced with `~/`
 
 
 ### Built With
