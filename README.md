@@ -16,7 +16,7 @@ sudo apt install python3-pip
 sudo -H pip3 install ansible
 ```
 
-MacOS
+MacOS  
 Use homebrew
 ```
 brew install ansible
