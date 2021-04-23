@@ -16,12 +16,6 @@ sudo apt install python3-pip
 sudo -H pip3 install ansible
 ```
 
-MacOS  
-Use homebrew
-```
-brew install ansible
-```
-
 ### Installation of Playbook
 Be advised, this playbook contains `vars_prompt` and requires user input
 
