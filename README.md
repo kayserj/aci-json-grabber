@@ -8,14 +8,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Must have a working version of Ansible 2.9 or similar.  
-Has not yet been tested on version 3.0 or above.  
+Tested working with Ansible 3.3
 
+Debian
+```
+sudo apt install python3-pip
+sudo -H pip3 install ansible
+```
+
+MacOS
+Use homebrew
+```
+brew install ansible
+```
 
 ### Installation of Playbook
+Be advised, this playbook contains `vars_prompt` and requires user input
 
 ```
-Just copy the playbook folder to your ansible controller
+Copy the playbook folder to your ansible controller
 ```
 
 ### Execution
@@ -28,12 +39,12 @@ For Password Based Authentication
 ansible-playbook -i aci_hosts grab-json-aci.yml
 ```
 
-Upon execution, the playbook will ask for user input.
+Upon execution, the playbook will ask for the user input.
 
 
 ### Details
 
-Running the playbook will create a folder of .json files in your user’s home directory.  After the play completes, check your home directory for the folder with the files. The users home directory is referenced with `~/`
+Running the playbook will create a folder called ansible_json_payload that contains .json files, in your user’s home directory.  After the play completes, check your home directory for the folder with the files. The users home directory is referenced with `~/`
 
 
 ### Built With
