@@ -10,9 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Tested working with Ansible 3.3
 
-Debian
 ```
-sudo apt install python3-pip
 sudo -H pip3 install ansible
 ```
 
