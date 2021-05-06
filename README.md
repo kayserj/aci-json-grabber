@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 Tested working with Ansible 3.3
-
+Must have python3-pip installed
 ```
 sudo -H pip3 install ansible
 ```
