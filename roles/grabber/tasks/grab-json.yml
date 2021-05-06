@@ -1,0 +1,18 @@
+---
+- name: Query '{{ item.aci_query_title | regex_replace('_', ' ') | upper }}'
+  aci_rest:
+    host: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: yes
+    validate_certs: false
+    path: "{{ item.api_query_target }}"
+    method: get
+  register: aci_response
+  tags: always
+
+- name: Copy Response to Disk
+  copy: 
+    content: '{{ aci_response }}' 
+    dest: '{{ payload_dir.path }}/{{ item.aci_query_title }}.json'
+  tags: always

@@ -1,0 +1,13 @@
+---
+- name: Make Working Directory
+  file:
+    path: ~/ansible_json_payload
+    state: directory
+    mode: '0755'
+  register: payload_dir
+  tags: always
+
+- name: Grabbing JSON
+  include_tasks: grab-json.yml
+  loop: '{{ aci_query_list }}'
+  tags: always
