@@ -24,12 +24,16 @@ aci_query_list:
  - { aci_query_title: 'vpc', api_query_target: '/api/node/class/fabricExplicitGEp.json?query-target=subtree&target-subtree-class=fabricExplicitGEp&rsp-subtree=full' }
  - { aci_query_title: 'ap', api_query_target: '/api/node/class/fvAp.json?query-target=subtree&target-subtree-class=fvAp&rsp-subtree=full' }
  - { aci_query_title: 'bridge_domain', api_query_target: '/api/node/class/fvBD.json?query-target=subtree&target-subtree-class=fvBD&rsp-subtree=full' }
- - { aci_query_title: 'consume_contracts', api_query_target: '/api/node/class/fvRsCons.json?query-target=subtree&target-subtree-class=fvRsCons&rsp-subtree=full' }
+ - { aci_query_title: 'contracts', api_query_target: '/api/node/class/vzBrCP.json?query-target=subtree&target-subtree-class=vzBrCP&rsp-subtree=full' }
+ - { aci_query_title: 'contracts_consume', api_query_target: '/api/node/class/fvRsCons.json?query-target=subtree&target-subtree-class=fvRsCons&rsp-subtree=full' }
+ - { aci_query_title: 'contracts_provide', api_query_target: '/api/node/class/fvRsProv.json?query-target=subtree&target-subtree-class=fvRsProv&rsp-subtree=full' }
  - { aci_query_title: 'dhcp_option_policy', api_query_target: '/api/node/class/dhcpOptionPol.json?query-target=subtree&target-subtree-class=dhcpOptionPol&rsp-subtree=full' }
  - { aci_query_title: 'dhcp_relay_policy', api_query_target: '/api/node/class/dhcpRelayP.json?query-target=subtree&target-subtree-class=dhcpRelayP&rsp-subtree=full' }
- - { aci_query_title: 'contracts', api_query_target: '/api/node/class/vzBrCP.json?query-target=subtree&target-subtree-class=vzBrCP&rsp-subtree=full' }
  - { aci_query_title: 'endpoint_group', api_query_target: '/api/class/fvAEPg.json?query-target=subtree&target-subtree-class=fvAEPg&rsp-subtree=full&rsp-subtree-class=fvRsBd' }
- - { aci_query_title: 'provide_contracts', api_query_target: '/api/node/class/fvRsProv.json?query-target=subtree&target-subtree-class=fvRsProv&rsp-subtree=full' }
+ - { aci_query_title: 'endpoint_security_group', api_query_target: '/api/class/fvESg.json?query-target=subtree&target-subtree-class=fvESg&rsp-subtree=full&rsp-subtree-class=fvESg' }
+ - { aci_query_title: 'endpoint_sg_tag_selector', api_query_target: '/api/class/fvTagSelector.json?query-target=subtree&target-subtree-class=fvTagSelector&rsp-subtree=full&rsp-subtree-class=fvTagSelector' }
+ - { aci_query_title: 'endpoint_sg_epg_selector', api_query_target: '/api/class/fvEPgSelector.json?query-target=subtree&target-subtree-class=fvEPgSelector&rsp-subtree=full&rsp-subtree-class=fvEPgSelector' }
+ - { aci_query_title: 'endpoint_sg_ip_selector', api_query_target: '/api/class/fvEPSelector.json?query-target=subtree&target-subtree-class=fvEPSelector&rsp-subtree=full&rsp-subtree-class=fvEPSelector' }
  - { aci_query_title: 'static_path_bindings', api_query_target: '/api/class/fvRsPathAtt.json?query-target=subtree&target-subtree-class=fvRsPathAtt&rsp-subtree=full' }
  - { aci_query_title: 'tenants', api_query_target: '/api/node/class/fvTenant.json' }
  - { aci_query_title: 'vrf', api_query_target: '/api/node/class/fvCtx.json?query-target=subtree&target-subtree-class=fvCtx&rsp-subtree=full' }
