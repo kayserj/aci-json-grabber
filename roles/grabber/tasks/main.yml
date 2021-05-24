@@ -10,4 +10,6 @@
 - name: Grabbing JSON
   include_tasks: grab-json.yml
   loop: '{{ aci_query_list }}'
+  loop_control:
+    label: '{{ item.aci_query_title }}'
   tags: always
