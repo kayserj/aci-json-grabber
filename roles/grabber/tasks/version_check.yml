@@ -1,0 +1,17 @@
+---
+- name: Checking APIC Firmware Version
+  cisco.aci.aci_rest:
+    host: "{{ inventory_hostname }}"
+    username: "{{ user }}"
+    password: "{{ pass }}"
+    use_ssl: yes
+    validate_certs: false
+    path: '/api/node/class/firmwareCtrlrFwStatusCont.json?query-target=subtree&target-subtree-class=firmwareCtrlrRunning'
+    method: get
+  register: aci_response
+  tags: always
+
+- name: Setting APIC Version Control
+  set_fact:
+    aci_version: "{{ aci_response | community.general.json_query('imdata[*].firmwareCtrlrRunning.attributes.version') }}"
+  tags: always

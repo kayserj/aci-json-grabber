@@ -7,9 +7,26 @@
   register: payload_dir
   tags: always
 
+- name: APIC Version Check
+  include_tasks: version_check.yml
+  tags: always
+
 - name: Grabbing JSON
   include_tasks: grab-json.yml
-  loop: '{{ aci_query_list }}'
+  loop: '{{ primary_vars }}'
   loop_control:
     label: '{{ item.aci_query_title }}'
+  tags: always
+
+- name: Grabbing JSON
+  include_tasks: grab-json.yml
+  loop: '{{ secondary_vars }}'
+  loop_control:
+    label: '{{ item.aci_query_title }}'
+  when: aci_version is search('5\.')
+  tags: always
+
+- name: Documentation Complete
+  debug:
+    msg: "Check your home directory for the generated files"
   tags: always
